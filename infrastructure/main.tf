@@ -1,0 +1,17 @@
+resource "hcloud_ssh_key" "server_public_key" {
+  name = "server-ssh-key"
+  public_key = file("./ed_id.pub")
+}
+
+# Link to server resource docs
+# https://registry.terraform.io/providers/hetznercloud/hcloud/latest/docs/resources/server
+resource "hcloud_server" "our_server" {
+  name = "our-server"
+
+  server_type = "cax21"
+  image = "debian-12"
+
+  ssh_keys = [
+    hcloud_ssh_key.server_public_key.id,
+  ]
+}
