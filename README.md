@@ -21,6 +21,11 @@ These are at their core rather simple, though they can quickly scale into very c
 
 ## Commands
 
+> [!IMPORTANT]
+> SSH-Keys (and other crypto identities) are potentially very hard to change if leaked. You can use ephemeral keys here, lessening the issue.
+>
+> But to build good habits, keep them somwhere safe (Private Key Managers, Cloud Vaults) and be mindeful of what they have access to. For important enough keys consider physical copies in safe deposit boxes as backups (no I am not joking).
+
 - Generate a default SSH Key
 
     ```sh
