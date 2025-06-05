@@ -13,7 +13,7 @@
 These are at their core rather simple, though they can quickly scale into very complex terrain. Learn the core, and use LLMs for the rest.
 
 - [SSH](https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys)
-  - How to connect to a remote server using **keys** and **ip addresses*
+  - How to connect to a remote server using **keys** and **IP addresses**
 - [Package Manager](https://www.onyxgs.com/blog/introduction-package-managers)
   - **Find** packages, **install** packages and **remove** packages
 - [Cloud Init](https://cloudinit.readthedocs.io/en/latest/tutorial/index.html)
