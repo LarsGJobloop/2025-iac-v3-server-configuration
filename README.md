@@ -1,4 +1,12 @@
-## Concepets
+## Major Terraform Parts
+
+- [Resources](https://developer.hashicorp.com/terraform/plugin/sdkv2/resources): What is managed
+- [Variables](https://developer.hashicorp.com/terraform/language/values): The data you don't want to version control, but is still required. Also for modules to enable compositions
+- [Outputs](https://developer.hashicorp.com/terraform/language/values): The data that you need for further automation.
+- [Providers](https://developer.hashicorp.com/terraform/language/providers): Datacenters and SaaS providers, misc functionality. All 3rd party dependencies.
+- [Registries](https://registry.terraform.io/): Where 3rd party modules can be sourced from.
+
+## Concepts
 
 ### Cloud Server Configurations
 
