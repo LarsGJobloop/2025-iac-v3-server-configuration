@@ -33,6 +33,7 @@
             docker
             terraform
             opentofu
+            hcloud
           ];
         };
       });
