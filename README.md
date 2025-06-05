@@ -57,6 +57,10 @@ These are at their core rather simple, though they can quickly scale into very c
     ```
     I heard that some practice a full automation setup of servers, GitOps. If I want to create a Terraform module for a Docker Compose Application what would be required for this? Say on Hetzner.
     ```
+- Persistence in face of ephemeral:
+    ```
+    I have setup a Docker Compose Application IaC module using Terraform and auto syncing with a Git repository, all deployed to Hetzner, which works great. But now I want to persist data across reboots and server creation. What are my options?
+    ```
 
 ## Module inspiration
 
