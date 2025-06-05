@@ -1,0 +1,8 @@
+# Ignore Dependencies
+.terraform
+
+# Variables
+*tfvars*
+
+# State Files
+*tfstate*
