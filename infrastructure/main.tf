@@ -1,3 +1,7 @@
+locals {
+  cloud_config = file("./cloud-config.yaml")
+}
+
 resource "hcloud_ssh_key" "server_public_key" {
   name = "server-ssh-key"
   public_key = file("./ed_id.pub")
@@ -10,6 +14,8 @@ resource "hcloud_server" "our_server" {
 
   server_type = "cax21"
   image = "debian-12"
+
+  user_data = local.cloud_config
 
   ssh_keys = [
     hcloud_ssh_key.server_public_key.id,

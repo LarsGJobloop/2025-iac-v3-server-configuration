@@ -1,0 +1,34 @@
+#cloud-config
+
+package_update: true
+package_upgrade: true
+
+packages:
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - gnupg
+  - lsb-release
+
+runcmd:
+  - |
+    # Add Docker’s official GPG key
+    install -m 0755 -d /etc/apt/keyrings
+    curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+    chmod a+r /etc/apt/keyrings/docker.gpg
+
+    # Set up the repository
+    echo \
+      "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
+      $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+    # Update and install Docker
+    apt-get update
+    apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+    # Add the default user (replace 'debian' if needed) to docker group
+    usermod -aG docker debian
+
+    # Enable and start Docker
+    systemctl enable docker
+    systemctl start docker

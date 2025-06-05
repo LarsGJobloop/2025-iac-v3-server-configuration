@@ -23,3 +23,9 @@
     ```sh
     exit
     ```
+
+## Example prompt for help setting up a new cloud config
+
+````
+could you give me simple cloud config yaml for a debian-12 docker server?
+```
