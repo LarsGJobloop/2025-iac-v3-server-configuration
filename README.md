@@ -28,44 +28,50 @@ These are at their core rather simple, though they can quickly scale into very c
 
 - Generate a default SSH Key
 
-    ```sh
-    ssh-keygen -t ed25519 -f ed_id
-    ```
+  ```sh
+  ssh-keygen -t ed25519 -f ed_id
+  ```
+
 - Log on to the server
 
-    ```sh
-    ssh -i ed_id root@157.180.124.210
-    ```
+  ```sh
+  ssh -i ed_id root@157.180.124.210
+  ```
+
 - Exit ssh
 
-    ```sh
-    exit
-    ```
+  ```sh
+  exit
+  ```
 
 ## Example prompts
 
 - Get some baseline `cloud-config.yaml` that you can start iterating on:
-    ```
-    could you give me simple cloud config yaml for a debian-12 docker server?
-    ```
+  ```
+  could you give me simple cloud config yaml for a debian-12 docker server?
+  ```
 - Hardening advice:
-    ```
-    On a standard Debian server instantiated through Terraform and Cloud Init, what are hardening options that should be implemented, considered to be implemented, and might be overkill to implement.
 
-    The context is for hosting an ASP .NET Core API, which auto syncs from a Git repository using a Pull approach.
-    ```
-    Follow up:
-    ```
-    Are there other things besides security concerns I might want to research?
-    ```
+  ```
+  On a standard Debian server instantiated through Terraform and Cloud Init, what are hardening options that should be implemented, considered to be implemented, and might be overkill to implement.
+
+  The context is for hosting an ASP .NET Core API, which auto syncs from a Git repository using a Pull approach.
+  ```
+
+  Follow up:
+
+  ```
+  Are there other things besides security concerns I might want to research?
+  ```
+
 - Hands-off server:
-    ```
-    I heard that some practice a full automation setup of servers, GitOps. If I want to create a Terraform module for a Docker Compose Application what would be required for this? Say on Hetzner.
-    ```
+  ```
+  I heard that some practice a full automation setup of servers, GitOps. If I want to create a Terraform module for a Docker Compose Application what would be required for this? Say on Hetzner.
+  ```
 - Persistence in face of ephemeral:
-    ```
-    I have setup a Docker Compose Application IaC module using Terraform and auto syncing with a Git repository, all deployed to Hetzner, which works great. But now I want to persist data across reboots and server creation. What are my options?
-    ```
+  ```
+  I have setup a Docker Compose Application IaC module using Terraform and auto syncing with a Git repository, all deployed to Hetzner, which works great. But now I want to persist data across reboots and server creation. What are my options?
+  ```
 
 ## Module inspiration
 
