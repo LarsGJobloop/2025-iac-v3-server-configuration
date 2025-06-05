@@ -69,14 +69,7 @@ These are at their core rather simple, though they can quickly scale into very c
 
 ## Module inspiration
 
-Here is an example of how a module might look. It's a higher level abstraction where you wrap a bundle of resources into a compose application. Allowing future you (or others) to quickly create new instances of a Compose Application. Some more names to inspire usages and thinking about abstractions (you might find that some of these already exists and can be used by you in projects):
-
-- `dotnet_application`
-- `postgresql`
-- `discord_bot`
-- `kubernetes_cluster`
-- `canvas`
-- `nextcloud` # Private cloud suite 
+Here is an example of how a module might look. It's a higher level abstraction where you wrap a bundle of resources into a compose application. Allowing future you (or others) to quickly create new instances of a Compose Application.
 
 ```tf
 module "compose_application" {
@@ -107,3 +100,12 @@ output "application_address" {
     }
 }
 ```
+
+And here is some more names to inspire other abstractions (you might find that some of these already exists and can be used by you in projects):
+
+- `dotnet_application`
+- `postgresql`
+- `discord_bot`
+- `kubernetes_cluster`
+- `canvas`
+- `nextcloud` # Private cloud suite
