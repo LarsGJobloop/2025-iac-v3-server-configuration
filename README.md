@@ -72,6 +72,13 @@ These are at their core rather simple, though they can quickly scale into very c
   ```
   I have setup a Docker Compose Application IaC module using Terraform and auto syncing with a Git repository, all deployed to Hetzner, which works great. But now I want to persist data across reboots and server creation. What are my options?
   ```
+- Collaboration and state:
+
+  ```
+  I am working with IaC on Hetzner and I see that there's a set of state files (.tfstate) being generated, and my teacher put them into the .gitignore file. What are they for?
+
+  Also we shared a live session with the teacher and he was confused by why duplicates of resources where being created. Quickly resolved by a student standing forth and telling they also ran the commands. That seems dangerous. How does one prevent this? And what is S3/Object Storage?
+  ```
 
 ## Module inspiration
 
