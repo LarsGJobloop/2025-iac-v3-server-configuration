@@ -10,9 +10,14 @@
 
 ### Cloud Server Configurations
 
-- [ ] SSH
-- [ ] Package Manager
-- [ ] Cloud Init
+These are at their core rather simple, though they can quickly scale into very complex terrain. Learn the core, and use LLMs for the rest.
+
+- [SSH](https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys)
+  - How to connect to a remote server using **keys** and **ip addresses*
+- [Package Manager](https://www.onyxgs.com/blog/introduction-package-managers)
+  - **Find** packages, **install** packages and **remove** packages
+- [Cloud Init](https://cloudinit.readthedocs.io/en/latest/tutorial/index.html)
+  - **Have a server use the config**, explore option on demand. Use LLMs to discover hardening necessities
 
 ## Commands
 
@@ -32,11 +37,26 @@
     exit
     ```
 
-## Example prompt for help setting up a new cloud config
+## Example prompts
 
-````
-could you give me simple cloud config yaml for a debian-12 docker server?
-```
+- Get some baseline `cloud-config.yaml` that you can start iterating on:
+    ```
+    could you give me simple cloud config yaml for a debian-12 docker server?
+    ```
+- Hardening advice:
+    ```
+    On a standard Debian server instantiated through Terraform and Cloud Init, what are hardening options that should be implemented, considered to be implemented, and might be overkill to implement.
+
+    The context is for hosting an ASP .NET Core API, which auto syncs from a Git repository using a Pull approach.
+    ```
+    Follow up:
+    ```
+    Are there other things besides security concerns I might want to research?
+    ```
+- Hands-off server:
+    ```
+    I heard that some practice a full automation setup of servers, GitOps. If I want to create a Terraform module for a Docker Compose Application what would be required for this? Say on Hetzner.
+    ```
 
 ## Module inspiration
 
